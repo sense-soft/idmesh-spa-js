@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "declarationDir": "./dist/typings",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "sourceMap": true,
+    "target": "ES2017",
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
