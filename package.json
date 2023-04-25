@@ -1,13 +1,13 @@
 {
   "name": "idmesh-spa-js",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/idmesh.cjs.js",
+  "module": "dist/idmesh.esm.js",
   "types": "dist/typings/index.d.ts",
   "type": "module",
   "scripts": {
-    "buildTs": "tsc",
-    "build": "rimraf dist && rollup -c"
+    "build": "rimraf dist && tsc --emitDeclarationOnly && rollup -c"
   },
   "author": "liur",
   "license": "MIT",
