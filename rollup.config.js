@@ -2,12 +2,14 @@ import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from "@rollup/plugin-terser";
-export default {
+import pkg from './package.json' assert { type: 'json' };
+
+const getConfig = (file, format) => ({
     input: 'src/index.ts',
     output: {
         name: 'idmesh',
-        file: 'dist/sdk.js',
-        format: 'iife',
+        file,
+        format,
         sourcemap: true,
     },
     plugins: [
@@ -23,4 +25,10 @@ export default {
             }
         })
     ],
-};
+});
+
+export default [
+    getConfig('dist/sdk.js', 'umd'),
+    getConfig(pkg.main, 'cjs'),
+    getConfig(pkg.module, 'esm'),
+];
