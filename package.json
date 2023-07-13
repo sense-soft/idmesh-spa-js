@@ -9,7 +9,15 @@
   "scripts": {
     "build": "rimraf dist && tsc --emitDeclarationOnly && rollup -c"
   },
-  "author": "liur",
+  "author": "sense-soft",
+  "homepage": "https://github.com/sense-soft/idmesh-spa-js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sense-soft/idmesh-spa-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sense-soft/idmesh-spa-js/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "@rollup/browser": "^3.20.2",
